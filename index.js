@@ -1,13 +1,21 @@
 let nao = document.getElementById('nao')
 let fds = document.querySelector('#sla')
 let texto = document.createElement('h2')
+let botoes = document.querySelector('#botoes')
+let titulo = document.querySelector('h1')
 let ctt = 0
     // let posicoes = []
 
 function SIM(){
     document.body.style = `
-        background-image: url()
+    animation: mycolor 4s infinite
     `
+
+    texto.textContent = 'EU TE AMO'
+    texto.style.color = 'white'
+    botoes.style.display = 'none'
+    titulo.textContent = 'YEEEEEEEEES'
+    fds.appendChild(texto)
 }
 
 nao.addEventListener('mouseover', () => {
@@ -43,14 +51,16 @@ nao.addEventListener('mouseover', () => {
         texto.style = `
             text-align: center;
             color: red;
-        `
+        `   
         fds.appendChild(texto)
     } else if(ctt == 20){
-        texto.textContent = 'pqp você não quer mesmo né'
+        texto.textContent = 'pfv, eu tenho muitas qualidades :)'
         texto.style = `
             text-align: center;
             color: red;
         `
         fds.appendChild(texto)
+    }  else if(ctt == 0){
+        
     }
 })
